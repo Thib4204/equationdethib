@@ -1,11 +1,134 @@
-equationdethib/ (VERSION SCIENTIFIQUEMENT EXACTE)
-├── 🌟 index.html                               (31.4 KB) - Interface avec données exactes
-├── ⚙️  netlify.toml                            (1.7 KB)  - Configuration Netlify optimisée
-├── 📚 README.md                                (7.9 KB)  - Documentation mise à jour
-├── 🚀 deploy.sh                                (7.2 KB)  - Script de déploiement automatique
-├── 🔒 .gitignore                               (908 B)   - Exclusions Git
-├── 📋 INSTRUCTIONS_DEPLOYMENT.md               (3.4 KB)  - Guide de déploiement rapide
-├── 📊 DEPLOYMENT_STATUS.md                     (5.1 KB)  - Statut technique détaillé
-├── 🎉 FINAL_DEPLOYMENT_SUMMARY.md              (6.0 KB)  - Synthèse complète
-├── ✅ DEPLOYMENT_INSTRUCTIONS_CORRECTED.md     (2.4 KB)  - Version corrigée
-└── 📋 VALIDATION_REPORT.md                     (6.3 KB)  - Rapport de validation
+Copy
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThibEquation ∑ | Framework d'Analyse d'Objets Interstellaires</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e0e0e0; margin: 0; padding: 20px; min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .hero { text-align: center; margin: 4rem 0; }
+        .equation {
+            background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(100, 181, 246, 0.5);
+            border-radius: 15px; padding: 2rem; font-size: 1.8rem; color: #64b5f6;
+            margin: 2rem 0; position: relative; overflow: hidden;
+        }
+        .equation::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(100, 181, 246, 0.2), transparent);
+            animation: shimmer 3s infinite; transform: rotate(45deg);
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+        .score { text-align: center; margin: 3rem 0; }
+        .score-number { font-size: 4rem; color: #64b5f6; font-weight: bold; }
+        .objects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .card {
+            background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px; padding: 2rem; text-align: center; transition: all 0.3s ease;
+        }
+        .card:hover { transform: translateY(-10px); border-color: rgba(100, 181, 246, 0.5); }
+        .symbol { font-size: 3rem; margin-bottom: 1rem; color: #64b5f6; }
+        .name { font-size: 1.3rem; color: #64b5f6; font-weight: bold; margin-bottom: 0.5rem; }
+        .date { color: #a0a0a0; margin-bottom: 1rem; font-style: italic; }
+        .objectives { background: rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 3rem; margin: 4rem 0; }
+        .obj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .obj-card { background: rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 1.5rem; text-align: center; }
+        .obj-icon { font-size: 2rem; margin-bottom: 1rem; }
+        .obj-title { color: #64b5f6; font-weight: bold; margin-bottom: 0.5rem; }
+        footer { text-align: center; padding: 3rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .highlight { color: #64b5f6; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1 style="font-size: 3rem; color: #64b5f6; margin-bottom: 2rem;">ThibEquation ∑</h1>
+            <div class="equation">
+                <div style="position: relative; z-index: 2;">
+                    S = [(A+0.1)×(I+0.1)×(R+0.1)×(U+0.1)] / [(C+0.1)×(P+0.1)] - 0.4
+                </div>
+            </div>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                Framework conceptuel inspiré par l'observation des objets interstellaires connus. 
+                Proposition exploratoire citoyenne nécessitant validation scientifique formelle.
+            </p>
+        </div>
+
+        <div class="score">
+            <h2 style="color: #64b5f6; margin-bottom: 1rem;">📊 État Actuel du Registre</h2>
+            <div class="score-number">2.64</div>
+            <p>Score Maximum (K2-18b)</p>
+        </div>
+
+        <h2 style="text-align: center; color: #64b5f6; margin: 4rem 0 2rem 0;">
+            ◦ Registre des Objets Interstellaires Confirmés ◦
+        </h2>
+        <div class="objects">
+            <div class="card">
+                <div class="symbol">◆</div>
+                <div class="name">1I/'Oumuamua</div>
+                <div class="date">Octobre 2017</div>
+                <p>Premier objet interstellaire détecté - accélération non-gravitationnelle observée</p>
+            </div>
+            <div class="card">
+                <div class="symbol">◐</div>
+                <div class="name">2I/Borisov</div>
+                <div class="date">Août 2019</div>
+                <p>Deuxième objet interstellaire confirmé - comète avec queue visible</p>
+            </div>
+            <div class="card">
+                <div class="symbol">◈</div>
+                <div class="name">CNEOS 2014-01-08</div>
+                <div class="date">Janvier 2014</div>
+                <p>Météore interstellaire confirmé par analyse de vitesse</p>
+            </div>
+            <div class="card">
+                <div class="symbol">⬟</div>
+                <div class="name">A11pl3Z</div>
+                <div class="date">Juillet 2025</div>
+                <p>Troisième objet découvert par F. D. Romanov</p>
+            </div>
+        </div>
+
+        <div class="objectives">
+            <h2 style="text-align: center; color: #64b5f6; margin-bottom: 2rem;">🎯 Objectifs du Framework</h2>
+            <div class="obj-grid">
+                <div class="obj-card">
+                    <div class="obj-icon">⚡</div>
+                    <div class="obj-title">Quantification Systématique</div>
+                    <p>Transformer les observations qualitatives en métriques quantifiables</p>
+                </div>
+                <div class="obj-card">
+                    <div class="obj-icon">🔍</div>
+                    <div class="obj-title">Détection d'Anomalies</div>
+                    <p>Identifier les objets présentant des caractéristiques inhabituelles</p>
+                </div>
+                <div class="obj-card">
+                    <div class="obj-icon">📊</div>
+                    <div class="obj-title">Priorisation d'Investigation</div>
+                    <p>Hiérarchiser les objets selon leur potentiel scientifique</p>
+                </div>
+                <div class="obj-card">
+                    <div class="obj-icon">🎯</div>
+                    <div class="obj-title">Standardisation</div>
+                    <p>Créer un système de notation uniforme</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong class="highlight">© 2024 ThibEquation</strong></p>
+        <p><strong class="highlight">Sorel-Tracy, Québec, Canada 🍁</strong></p>
+        <p><strong class="highlight">La science collaborative québécoise est prête pour vos contributions ! 🌟</strong></p>
+    </footer>
+</body>
+</html>
