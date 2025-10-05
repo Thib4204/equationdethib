@@ -1,7 +1,311 @@
-<html>
-  <head><title>ThibEquation</title></head>
-  <body>
-    <h1>Site ThibEquation opérationnel !</h1>
-    <p>Le site est en ligne sur Netlify grâce au commit du fichier index.html.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThibEquation - Révolutionnez vos calculs mathématiques</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Section */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #667eea;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        /* Concept Section */
+        .concept {
+            background: white;
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .concept-card {
+            padding: 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .concept-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .concept-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .concept-card p {
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ThibEquation</div>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#concept">Concept</a></li>
+                    <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>🚀 ThibEquation</h1>
+                <p>La plateforme révolutionnaire pour résoudre vos équations mathématiques</p>
+                <p>Découvrez une nouvelle façon d'aborder les mathématiques avec élégance et simplicité</p>
+                <a href="#concept" class="cta-button">Découvrir le concept</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="concept" class="concept">
+        <div class="container">
+            <h2 class="section-title">💡 Notre Concept</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto;">
+                ThibEquation est né d'une vision : rendre les mathématiques accessibles, intuitives et même agréables pour tous.
+            </p>
+            
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h3>🎯 Simplicité</h3>
+                    <p>
+                        Une interface épurée et intuitive qui permet de se concentrer sur l'essentiel : 
+                        résoudre des équations sans complications inutiles.
+                    </p>
+                </div>
+                
+                <div class="concept-card">
+                    <h3>⚡ Performance</h3>
+                    <p>
+                        Des algorithmes optimisés pour des calculs ultra-rapides, même avec les équations 
+                        les plus complexes. Obtenez vos résultats instantanément.
+                    </p>
+                </div>
+                
+                <div class="concept-card">
+                    <h3>🎓 Pédagogie</h3>
+                    <p>
+                        Comprendre plutôt que simplement calculer. Chaque résolution est accompagnée 
+                        d'explications détaillées pour faciliter l'apprentissage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fonctionnalites" class="features">
+        <div class="container">
+            <h2 class="section-title">✨ Fonctionnalités Principales</h2>
+            
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>Visualisation Graphique</h3>
+                    <p>Représentez vos équations sous forme de graphiques interactifs</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🔢</div>
+                    <h3>Multiples Types d'Équations</h3>
+                    <p>Linéaires, quadratiques, exponentielles et bien plus encore</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">💾</div>
+                    <h3>Historique de Calculs</h3>
+                    <p>Sauvegardez et retrouvez vos calculs précédents</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Accessible Partout</h3>
+                    <p>Utilisez ThibEquation sur tous vos appareils</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ThibEquation - Déployé avec succès sur Netlify 🚀</p>
+            <p>Créé avec passion par Thib4204</p>
+        </div>
+    </footer>
+</body>
 </html>
