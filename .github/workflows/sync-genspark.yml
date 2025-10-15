@@ -1,0 +1,36 @@
+name: Sync Genspark → Netlify
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 5 * * *'  # ou à la demande
+
+jobs:
+  sync-build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Download Genspark build
+      run: |
+        rm -rf site_genspark
+        mkdir site_genspark
+        wget -r -np -nH --cut-dirs=1 --no-parent --reject="index.html*" https://kvfdkiqr.gensparkspace.com/ -P site_genspark
+
+    - name: Copy all files
+      run: |
+        rsync -av site_genspark/ . --exclude=.git --exclude=.github
+
+    - name: Commit updates
+      run: |
+        git config user.name "Genspark Sync Bot"
+        git config user.email "bot@genspark-sync.local"
+        git add .
+        git commit -m "Sync auto depuis Genspark" || echo "No changes to commit"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.8.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
